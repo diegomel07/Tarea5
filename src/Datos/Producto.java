@@ -46,10 +46,5 @@ public class Producto {
 				+ getDescripcion() + ", Nombre = " + getNombre() + "]";
 	}
 	
-	
-	
-
-	
-	
 
 }

@@ -2,12 +2,12 @@ package Datos;
 import java.util.*;
 
 public class Comestibles extends Producto {
-	public Date fechaExpedicion;
-	public String fabricante;
-	public int contenidoNeto;
-	public Date fechaVencimiento;
-	public boolean perecedero;
-	public String empaquetado;
+	private Date fechaExpedicion;
+	private String fabricante;
+	private int contenidoNeto;
+	private Date fechaVencimiento;
+	private boolean perecedero;
+	private String empaquetado;
 	
 	
 	public Date getFechaExpedicion() {
@@ -46,6 +46,7 @@ public class Comestibles extends Producto {
 	public void setEmpaquetado(String empaquetado) {
 		this.empaquetado = empaquetado;
 	}
+
 	public Comestibles(int precio, int id, String descripcion, String nombre, Date fechaExpedicion, String fabricante,
 			int contenidoNeto, Date fechaVencimiento, boolean perecedero, String empaquetado) {
 		super(precio, id, descripcion, nombre);
@@ -56,6 +57,7 @@ public class Comestibles extends Producto {
 		this.perecedero = perecedero;
 		this.empaquetado = empaquetado;
 	}
+
 	@Override
 	public String toString() {
 		return "Comestibles [Fecha Expedicion = " + getFechaExpedicion() + ", Fabricante = " + getFabricante()
@@ -64,5 +66,4 @@ public class Comestibles extends Producto {
 	}
 	
 	
-
 }

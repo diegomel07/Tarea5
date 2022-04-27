@@ -1,10 +1,10 @@
 package Datos;
 
 public class Aseo extends Producto{
-	public String productor;
-	public boolean toxico; 
-	public int cotenidoNeto;
-	public String estado;
+	private String productor;
+	private boolean toxico; 
+	private int cotenidoNeto;
+	private String estado;
 	
 	
 	public String getProductor() {

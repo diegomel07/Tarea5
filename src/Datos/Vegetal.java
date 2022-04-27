@@ -3,10 +3,9 @@ package Datos;
 import java.util.*;
 
 public class Vegetal extends Comestibles {
-	public String tipo;
-	public String color;
-	public String clima;
-	
+	private String tipo;
+	private String color;
+	private String clima;
 	
 	public String getTipo() {
 		return this.tipo;
@@ -35,6 +34,7 @@ public class Vegetal extends Comestibles {
 		this.color = color;
 		this.clima = clima;
 	}
+	
 	@Override
 	public String toString() {
 		return "Vegetal [Tipo = " + getTipo() + ", Color = " + getColor() + ", Clima = " + getClima() + "]";

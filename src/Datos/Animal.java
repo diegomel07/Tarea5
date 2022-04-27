@@ -3,9 +3,10 @@ package Datos;
 import java.util.Date;
 
 public class Animal extends Comestibles {
-	public String tipo;
-	public int edad;
-	public String clima;
+	private String tipo;
+	private int edad;
+	private String clima;
+	
 	public String getTipo() {
 		return tipo;
 	}
@@ -24,6 +25,7 @@ public class Animal extends Comestibles {
 	public void setClima(String clima) {
 		this.clima = clima;
 	}
+
 	public Animal(int precio, int id, String descripcion, String nombre, Date fechaExpedicion, String fabricante,
 			int contenidoNeto, Date fechaVencimiento, boolean perecedero, String empaquetado, String tipo, int edad,
 			String clima) {
@@ -34,6 +36,10 @@ public class Animal extends Comestibles {
 		this.clima = clima;
 	}
 	
+	@Override
+	public String toString() {
+		return "Animal [clima=" + clima + ", edad=" + edad + ", tipo=" + tipo + "]";
+	}
 	
 
 }
