@@ -26,7 +26,7 @@ public class Vegetal extends Comestibles {
 		this.clima = clima;
 	}
 	public Vegetal(int precio, int id, String descripcion, String nombre, Date fechaExpedicion, String fabricante,
-			int contenidoNeto, Date fechaVencimiento, boolean perecedero, String empaquetado, String tipo, String color,
+			int contenidoNeto, Date fechaVencimiento, boolean perecedero, Boolean empaquetado, String tipo, String color,
 			String clima) {
 		super(precio, id, descripcion, nombre, fechaExpedicion, fabricante, contenidoNeto, fechaVencimiento, perecedero,
 				empaquetado);

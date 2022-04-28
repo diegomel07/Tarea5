@@ -3,43 +3,43 @@ package Datos;
 import java.util.Date;
 
 public class DeTierra extends Animal {
-    private int cant_aletas;
-    private String tipo_agua;
-    private int profundidad;
+    private int cant_patas;
+    private String habitat;
+    private boolean vuela;
 
-    public int getCant_aletas() {
-        return cant_aletas;
+    public int getCant_patas() {
+        return cant_patas;
     }
-    public void setCant_aletas(int cant_aletas) {
-        this.cant_aletas = cant_aletas;
+    public void setCant_patas(int cant_patas) {
+        this.cant_patas = cant_patas;
     }
-    public String getTipo_agua() {
-        return tipo_agua;
+    public String getHabitat() {
+        return habitat;
     }
-    public void setTipo_agua(String tipo_agua) {
-        this.tipo_agua = tipo_agua;
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
     }
-    public int getProfundidad() {
-        return profundidad;
+    public boolean isSiVuela() {
+        return vuela;
     }
-    public void setProfundidad(int profundidad) {
-        this.profundidad = profundidad;
+    public void setSiVuela(boolean siVuela) {
+        this.vuela = siVuela;
     }
 
     public DeTierra(int precio, int id, String descripcion, String nombre, Date fechaExpedicion, String fabricante,
-            int contenidoNeto, Date fechaVencimiento, boolean perecedero, String empaquetado, String tipo, int edad,
-            String clima, int cant_aletas, String tipo_agua, int profundidad) {
+            int contenidoNeto, Date fechaVencimiento, boolean perecedero, Boolean empaquetado, String tipo, int edad,
+            String clima, int cant_patas, String habitat, boolean vuela) {
         super(precio, id, descripcion, nombre, fechaExpedicion, fabricante, contenidoNeto, fechaVencimiento, perecedero,
                 empaquetado, tipo, edad, clima);
-        this.cant_aletas = cant_aletas;
-        this.tipo_agua = tipo_agua;
-        this.profundidad = profundidad;
+        this.cant_patas = cant_patas;
+        this.habitat = habitat;
+        this.vuela = vuela;
     }
+
 
     @Override
     public String toString() {
-        return "DeTierra [cant_aletas=" + cant_aletas + ", profundidad=" + profundidad + ", tipo_agua=" + tipo_agua
-                + "]";
+        return "DeTierra [cant_patas=" + cant_patas + ", habitat=" + habitat + ", vuela=" + vuela + "]";
     }
     
     

@@ -1,6 +1,6 @@
 package Datos;
 
-public class Producto {
+public abstract class Producto {
 	
 	private int precio;
 	private int id;

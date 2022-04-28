@@ -2,7 +2,7 @@ package Datos;
 
 import java.util.Date;
 
-public class Animal extends Comestibles {
+public abstract class Animal extends Comestibles {
 	private String tipo;
 	private int edad;
 	private String clima;
@@ -25,9 +25,9 @@ public class Animal extends Comestibles {
 	public void setClima(String clima) {
 		this.clima = clima;
 	}
-
+	
 	public Animal(int precio, int id, String descripcion, String nombre, Date fechaExpedicion, String fabricante,
-			int contenidoNeto, Date fechaVencimiento, boolean perecedero, String empaquetado, String tipo, int edad,
+			int contenidoNeto, Date fechaVencimiento, boolean perecedero, Boolean empaquetado, String tipo, int edad,
 			String clima) {
 		super(precio, id, descripcion, nombre, fechaExpedicion, fabricante, contenidoNeto, fechaVencimiento, perecedero,
 				empaquetado);
@@ -35,10 +35,9 @@ public class Animal extends Comestibles {
 		this.edad = edad;
 		this.clima = clima;
 	}
-	
 	@Override
 	public String toString() {
-		return "Animal [clima=" + clima + ", edad=" + edad + ", tipo=" + tipo + "]";
+		return  super.toString() + "Animal [clima=" + clima + ", edad=" + edad + ", tipo=" + tipo + "]";
 	}
 	
 
