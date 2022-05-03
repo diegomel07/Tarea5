@@ -37,7 +37,7 @@ public class Artificial extends Comestibles{
 
     @Override
     public String toString() {
-        return "Artificial [cant_por_paquete=" + cant_por_paquete + ", estado=" + estado + ", tipo_de_paquete="
+        return super.toString() + "Artificial [cant_por_paquete=" + cant_por_paquete + ", estado=" + estado + ", tipo_de_paquete="
                 + tipo_de_paquete + "]";
     }
  

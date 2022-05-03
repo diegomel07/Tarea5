@@ -39,7 +39,7 @@ public class DeTierra extends Animal {
 
     @Override
     public String toString() {
-        return "DeTierra [cant_patas=" + cant_patas + ", habitat=" + habitat + ", vuela=" + vuela + "]";
+        return super.toString() +  "DeTierra [cant_patas=" + cant_patas + ", habitat=" + habitat + ", vuela=" + vuela + "]";
     }
     
     

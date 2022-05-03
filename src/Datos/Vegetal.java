@@ -37,7 +37,7 @@ public class Vegetal extends Comestibles {
 	
 	@Override
 	public String toString() {
-		return "Vegetal [Tipo = " + getTipo() + ", Color = " + getColor() + ", Clima = " + getClima() + "]";
+		return super.toString() + "Vegetal [Tipo = " + getTipo() + ", Color = " + getColor() + ", Clima = " + getClima() + "]";
 	}
 	
 	

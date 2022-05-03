@@ -3,6 +3,8 @@ package Iu;
 import java.util.Scanner;
 
 public class Interfaz {
+
+    static Scanner leer = new Scanner(System.in);
     
     public static void bienvenida() {
         System.out.println("Bienvenidos a su Cooperativa Ecomún!!! ");
@@ -20,7 +22,6 @@ public class Interfaz {
     }
 
     public static int elegirOpcion() {
-        Scanner leer = new Scanner(System.in);
         System.out.print("\nDigite una opción: ");
         return leer.nextInt();
     }
@@ -30,6 +31,15 @@ public class Interfaz {
         System.out.println("\nLos mejores productos a un solo click.");
         System.out.println("1.- Vegetal");
         System.out.println("2.- Animal");
+        System.out.println("3.- Artificial");
+        System.out.println("0.- Salir");
+    }
+
+    // menu animal
+    public static void menuAnimal(){
+        System.out.println("\nLos mejores productos a un solo click.");
+        System.out.println("1.- De Mar");
+        System.out.println("2.- De Tierra");
         System.out.println("0.- Salir");
     }
 
@@ -44,14 +54,32 @@ public class Interfaz {
     // menu Ropa
     public static void menuRopa(){
         System.out.println("\nLa mejor calidad en ropa para toda la familia.");
-        System.out.println("1.- Crear nuevo Materia");
-        System.out.println("2.- Ver Materia");
-        System.out.println("0.- Salir");
+    }
+
+    // Despedida
+    public static void despedida(){
+        System.out.println("Vuelva pronto a Cooperativa Ecomún!");
     }
 
     // default
     public static void opcionIncorrecta(){
         System.out.println("\nNo digito una opción valida");
+    }
+
+    // Opcion de producto
+    public static int digiteId(){
+        System.out.println("Digite el ID del producto que desea visualizar: ");
+        return leer.nextInt();
+    }
+
+    // id equivocado
+    public static void idInexistente(){
+        System.out.println("El ID que digito no coincide con ninguno de los productos existentes.");
+    }
+
+    // imprimir datos del producto
+    public static void imprimirDatos(String datos){
+        System.out.println(datos);
     }
 
 }

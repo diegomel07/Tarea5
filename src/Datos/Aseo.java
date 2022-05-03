@@ -1,6 +1,6 @@
 package Datos;
 
-public class Aseo extends Producto{
+public abstract class Aseo extends Producto{
 	private String productor;
 	private boolean toxico; 
 	private int cotenidoNeto;
@@ -41,7 +41,7 @@ public class Aseo extends Producto{
 	}
 	@Override
 	public String toString() {
-		return "Aseo [Productor = " + getProductor() + ", Toxico = " + isToxico() + ", Cotenido Neto = "
+		return super.toString() + "Aseo [Productor = " + getProductor() + ", Toxico = " + isToxico() + ", Cotenido Neto = "
 				+ getCotenidoNeto() + ", Estado = " + getEstado() + "]";
 	}
 	

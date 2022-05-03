@@ -39,9 +39,11 @@ public class Ropa extends Producto {
 		this.marca = marca;
 		this.genero = genero;
 	}
+
+	
 	@Override
 	public String toString() {
-		return "Ropa [Material = " + getMaterial() + ", Talla = " + getTalla() + ", Marca =" + getMarca()
+		return super.toString() + "Ropa [Material = " + getMaterial() + ", Talla = " + getTalla() + ", Marca =" + getMarca()
 				+ ", Genero = " + getGenero() + "]";
 		
 	}
