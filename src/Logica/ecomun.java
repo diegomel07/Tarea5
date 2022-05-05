@@ -1,16 +1,20 @@
 package Logica;
 
-import Datos.*;
 import Iu.*;
 
 import java.util.*;
+
 
 
 // preguntar si creamos una clase empaque :v
 public class ecomun {
 
     public static void main(String[] args) {
+
+        // Ejemplos
+        LinkedHashMap<String, ArrayList<String>> datos_basicos_productos = Funciones.agruparDatosBasicos();
         
+        // Crear la opcion de comprar o vender
         int opcion;
         Interfaz.bienvenida();
         
@@ -31,12 +35,11 @@ public class ecomun {
                             case 1:
                                 Funciones.clearScreen();
                                 // vegetal
-                                final ArrayList<Vegetal> ejemplo_vegetal = Ejemplo.creandoVegetal();
-                                Funciones.imprimirListaVegetal(ejemplo_vegetal);
+                                Interfaz.imprimirListaProductos(datos_basicos_productos.get("Vegetal"));
                                 String datos_vegetal;
                                 do {
                                     final int opciones_vegetal = Interfaz.digiteId();
-                                    datos_vegetal = Funciones.datosVegetal(opciones_vegetal, ejemplo_vegetal);
+                                    datos_vegetal = Funciones.datosVegetal(opciones_vegetal);
                                     if (datos_vegetal.equals("")){
                                         Interfaz.idInexistente();
                                     } else {
@@ -56,13 +59,12 @@ public class ecomun {
                                     switch (opcion_animal){
                                         case 1:
                                             Funciones.clearScreen();
-                                            //De mar
-                                            final ArrayList<DeMar> ejemplo_mar = Ejemplo.creandoDemar();
-                                            Funciones.imprimirListaDeMar(ejemplo_mar);
+                                            //De mar                                            
+                                            Interfaz.imprimirListaProductos(datos_basicos_productos.get("De Mar"));
                                             String datos_mar;
                                             do {
                                                 final int opcion_Mar = Interfaz.digiteId();
-                                                datos_mar = Funciones.datosDeMar(opcion_Mar, ejemplo_mar);
+                                                datos_mar = Funciones.datosDeMar(opcion_Mar);
                                                 if (datos_mar.equals("")){
                                                     Interfaz.idInexistente();
                                                 } else {
@@ -74,13 +76,12 @@ public class ecomun {
 
                                         case 2:
                                             Funciones.clearScreen();
-                                            // de Tierra
-                                            final ArrayList<DeTierra> ejemplo_de_tierra = Ejemplo.creandoDeTierra();
-                                            Funciones.imprimirListaDeTierra(ejemplo_de_tierra);                                            
+                                            // de Tierra                                            
+                                            Interfaz.imprimirListaProductos(datos_basicos_productos.get("De Tierra"));                                           
                                             String datos_tierra;
                                             do {
                                                 final int opcion_deTierra = Interfaz.digiteId();
-                                                datos_tierra = Funciones.datosDeTierra(opcion_deTierra, ejemplo_de_tierra);                                                
+                                                datos_tierra = Funciones.datosDeTierra(opcion_deTierra);                                                
                                                 if (datos_tierra.equals("")){
                                                     Interfaz.idInexistente();
                                                 } else {
@@ -103,13 +104,12 @@ public class ecomun {
 
                             case 3:
                                 Funciones.clearScreen();
-                                // artificial
-                                final ArrayList<Artificial> ejemplo_artificial = Ejemplo.creandoArtificial();
-                                Funciones.imprimirListaArtificial(ejemplo_artificial);
+                                // artificial                                
+                                Interfaz.imprimirListaProductos(datos_basicos_productos.get("Artificiales"));
                                 String datos_artificial;
                                 do {
                                     final int opcion_artificial = Interfaz.digiteId();
-                                    datos_artificial = Funciones.datosArtificial(opcion_artificial, ejemplo_artificial);
+                                    datos_artificial = Funciones.datosArtificial(opcion_artificial);
                                     if (datos_artificial.equals("")){
                                         Interfaz.idInexistente();
                                     } else {
@@ -140,13 +140,12 @@ public class ecomun {
 
                         switch (opcion_aseo){                            
                             case 1:
-                                Funciones.clearScreen();
-                                final ArrayList<Hogar> ejemplo_hogar = Ejemplo.creandoHogar();
-                                Funciones.imprimirListaHogar(ejemplo_hogar);
+                                Funciones.clearScreen();                            
+                                Interfaz.imprimirListaProductos(datos_basicos_productos.get("Hogar"));
                                 String datos_hogar;
                                 do {
                                     final int opcion_hogar = Interfaz.digiteId();
-                                    datos_hogar = Funciones.datosHogar(opcion_hogar, ejemplo_hogar);
+                                    datos_hogar = Funciones.datosHogar(opcion_hogar);
                                     if (datos_hogar.equals("")){
                                         Interfaz.idInexistente();
                                     } else {
@@ -155,13 +154,12 @@ public class ecomun {
                                 } while (datos_hogar.equals(""));
                                 break;
                             case 2:
-                                Funciones.clearScreen();
-                                final ArrayList<Personal> ejemplo_personal = Ejemplo.creandoPersonal();
-                                Funciones.imprimirListaPersonal(ejemplo_personal);                                
+                                Funciones.clearScreen();                                
+                                Interfaz.imprimirListaProductos(datos_basicos_productos.get("Personal"));                                
                                 String datos_personal;
                                 do {
                                     final int opcion_personal = Interfaz.digiteId();
-                                    datos_personal = Funciones.datosPersonal(opcion_personal, ejemplo_personal);
+                                    datos_personal = Funciones.datosPersonal(opcion_personal);
                                     if (datos_personal.equals("")){
                                         Interfaz.idInexistente();
                                     } else {
@@ -183,13 +181,12 @@ public class ecomun {
                     break;
                 case 3:
                     Funciones.clearScreen();
-                    Interfaz.menuRopa();
-                    final ArrayList<Ropa> ejemplo_ropa = Ejemplo.creandoRopa();
-                    Funciones.imprimirListaRopa(ejemplo_ropa);                    
+                    Interfaz.menuRopa();                    
+                    Interfaz.imprimirListaProductos(datos_basicos_productos.get("Ropa"));                   
                     String datos_ropa;
                     do {
-                        int opcion_ropa = Interfaz.digiteId();
-                        datos_ropa = Funciones.datosRopa(opcion_ropa, ejemplo_ropa);
+                        final int opcion_ropa = Interfaz.digiteId();
+                        datos_ropa = Funciones.datosRopa(opcion_ropa);
                         if (datos_ropa.equals("")){
                             Interfaz.idInexistente();
                         } else {
@@ -197,6 +194,15 @@ public class ecomun {
                         }
                     } while (datos_ropa.equals(""));
                     break;
+                
+                case 4:
+                    Funciones.clearScreen();
+                    for (ArrayList<String> datos : datos_basicos_productos.values()){
+                        Interfaz.imprimirListaProductos(datos);
+                    }
+                    
+                    break;
+
                 case 0:
                     Interfaz.despedida();
                     break;
@@ -205,6 +211,7 @@ public class ecomun {
                     break;
                     
             }
+
         } while (opcion != 0);
         
     }

@@ -1,5 +1,6 @@
 package Iu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Interfaz {
@@ -17,6 +18,7 @@ public class Interfaz {
         System.out.println("1.- Comestibles");
         System.out.println("2.- Aseo");
         System.out.println("3.- Ropa");
+        System.out.println("4.- Todos los Prodcutos");
         System.out.println("0.- Salir");
 
     }
@@ -80,6 +82,13 @@ public class Interfaz {
     // imprimir datos del producto
     public static void imprimirDatos(String datos){
         System.out.println(datos);
+    }
+
+    // imprimir lista de un producto
+    public static void imprimirListaProductos(ArrayList<String> lista){
+        for (String pro : lista){
+            System.out.println(pro);
+        }
     }
 
 }

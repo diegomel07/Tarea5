@@ -5,6 +5,17 @@ import java.util.*;
 
 public class Funciones {
 
+    // Instanciando ejemplos
+    final static ArrayList<Vegetal> ejemplo_vegetal = Ejemplo.creandoVegetal();
+    final static ArrayList<DeMar> ejemplo_mar = Ejemplo.creandoDemar();
+    final static ArrayList<DeTierra> ejemplo_de_tierra = Ejemplo.creandoDeTierra();
+    final static ArrayList<Artificial> ejemplo_artificial = Ejemplo.creandoArtificial();
+    final static ArrayList<Hogar> ejemplo_hogar = Ejemplo.creandoHogar();
+    final static ArrayList<Personal> ejemplo_personal = Ejemplo.creandoPersonal();
+    final static ArrayList<Ropa> ejemplo_ropa = Ejemplo.creandoRopa();
+
+
+
     public static void clearScreen() {  
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -18,14 +29,19 @@ public class Funciones {
         return (new Date(rand.nextLong(d1.getTime(), d2.getTime())));
     }
 
-    public static void imprimirListaVegetal(ArrayList<Vegetal> arreglo){
+
+    public static ArrayList<String> listaVegetal(ArrayList<Vegetal> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (Vegetal obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
     }
 
-    public static String datosVegetal(int id, ArrayList<Vegetal> arreglo){
-        for (Vegetal obj : arreglo){
+    public static String datosVegetal(int id){
+        for (Vegetal obj : ejemplo_vegetal){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -35,14 +51,18 @@ public class Funciones {
     }
 
     
-    public static void imprimirListaDeMar (ArrayList<DeMar> arreglo){
+    public static ArrayList<String> listaDeMar (ArrayList<DeMar> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (DeMar obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
     }
 
-    public static String datosDeMar(int id, ArrayList<DeMar> arreglo){
-        for (DeMar obj : arreglo){
+    public static String datosDeMar(int id){
+        for (DeMar obj : ejemplo_mar){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -52,14 +72,18 @@ public class Funciones {
     }
     
 
-    public static void imprimirListaDeTierra (ArrayList<DeTierra> arreglo){
+    public static ArrayList<String> listaDeTierra (ArrayList<DeTierra> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (DeTierra obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
     }
 
-    public static String datosDeTierra(int id, ArrayList<DeTierra> arreglo){
-        for (DeTierra obj : arreglo){
+    public static String datosDeTierra(int id){
+        for (DeTierra obj : ejemplo_de_tierra){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -69,17 +93,20 @@ public class Funciones {
     }
 
 
-    public static void imprimirListaArtificial( ArrayList<Artificial> arreglo){
+    public static ArrayList<String> listaArtificial( ArrayList<Artificial> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
 
         for (Artificial obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
 
     }
 
-    public static String datosArtificial(int id, ArrayList<Artificial> arreglo){
+    public static String datosArtificial(int id){
 
-        for (Artificial obj : arreglo){
+        for (Artificial obj : ejemplo_artificial){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -90,14 +117,18 @@ public class Funciones {
     }
 
 
-    public static void imprimirListaPersonal(ArrayList<Personal> arreglo){
+    public static ArrayList<String> listaPersonal(ArrayList<Personal> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (Personal obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());        
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
     }
 
-    public static String datosPersonal(int id, ArrayList<Personal> arreglo){
-        for (Personal obj : arreglo){
+    public static String datosPersonal(int id){
+        for (Personal obj : ejemplo_personal){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -107,13 +138,19 @@ public class Funciones {
 
     }
 
-    public static void imprimirListaHogar(ArrayList<Hogar> arreglo){
+
+    public static ArrayList<String> listaHogar(ArrayList<Hogar> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (Hogar obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId());        
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());    
         }
+
+        return datos_basicos;
     }
-    public static String datosHogar(int id, ArrayList<Hogar> arreglo){
-        for (Hogar obj : arreglo){
+
+    public static String datosHogar(int id){
+        for (Hogar obj : ejemplo_hogar){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -123,14 +160,18 @@ public class Funciones {
     }
 
 
-    public static void imprimirListaRopa(ArrayList<Ropa> arreglo){
+    public static ArrayList<String> listaRopa(ArrayList<Ropa> arreglo){
+        ArrayList<String> datos_basicos = new ArrayList<>();
+
         for (Ropa obj : arreglo){
-            System.out.println("Nombre: " + obj.getNombre() + " Id: " + obj.getId()); 
+            datos_basicos.add("Id: " + obj.getId() + " Nombre: " + obj.getNombre());
         }
+
+        return datos_basicos;
     }
 
-    public static String datosRopa(int id, ArrayList<Ropa> arreglo){
-        for (Ropa obj : arreglo){
+    public static String datosRopa(int id){
+        for (Ropa obj : ejemplo_ropa){
             if (obj.getId() == id){
                 return obj.toString();
             }
@@ -138,6 +179,24 @@ public class Funciones {
 
         return "";
     }
+
+    // LinkedHashMap de todos los nombre + id de los objetos
+    public static LinkedHashMap<String, ArrayList<String>> agruparDatosBasicos (){
+        
+        LinkedHashMap<String, ArrayList<String>> datosBasicos = new LinkedHashMap<String, ArrayList<String>>();
+
+        datosBasicos.put("Vegetal", listaVegetal(ejemplo_vegetal));
+        datosBasicos.put("De Mar", listaDeMar(ejemplo_mar));
+        datosBasicos.put("De Tierra", listaDeTierra(ejemplo_de_tierra));
+        datosBasicos.put("Artificiales", listaArtificial(ejemplo_artificial));
+        datosBasicos.put("Hogar", listaHogar(ejemplo_hogar));
+        datosBasicos.put("Personal", listaPersonal(ejemplo_personal));
+        datosBasicos.put("Ropa", listaRopa(ejemplo_ropa));
+
+        return datosBasicos;
+    }
+
 }
+
 
 
