@@ -15,7 +15,6 @@ public class Funciones {
     final static ArrayList<Ropa> ejemplo_ropa = Ejemplo.creandoRopa();
 
 
-
     public static void clearScreen() {  
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
@@ -43,7 +42,7 @@ public class Funciones {
     public static String datosVegetal(int id){
         for (Vegetal obj : ejemplo_vegetal){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -64,7 +63,7 @@ public class Funciones {
     public static String datosDeMar(int id){
         for (DeMar obj : ejemplo_mar){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -85,7 +84,7 @@ public class Funciones {
     public static String datosDeTierra(int id){
         for (DeTierra obj : ejemplo_de_tierra){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -108,7 +107,7 @@ public class Funciones {
 
         for (Artificial obj : ejemplo_artificial){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -130,7 +129,7 @@ public class Funciones {
     public static String datosPersonal(int id){
         for (Personal obj : ejemplo_personal){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -152,7 +151,7 @@ public class Funciones {
     public static String datosHogar(int id){
         for (Hogar obj : ejemplo_hogar){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 
@@ -173,7 +172,7 @@ public class Funciones {
     public static String datosRopa(int id){
         for (Ropa obj : ejemplo_ropa){
             if (obj.getId() == id){
-                return obj.toString();
+                return obj.toString() + "\n\n\n" +  obj.mensajeDeProtesta();
             }
         }
 

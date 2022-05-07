@@ -42,6 +42,6 @@ public class DeMar extends Animal {
         return super.toString() + "DeMar [cant_aletas=" + cant_aletas + ", profundidad=" + profundidad + ", tipo_agua=" + tipo_agua
                 + "]";
     }
-    
+
     
 }

@@ -39,6 +39,12 @@ public abstract class Animal extends Comestibles {
 	public String toString() {
 		return  super.toString() + "Animal [clima=" + clima + ", edad=" + edad + ", tipo=" + tipo + "]";
 	}
+
+	// Mensaje de protesta de los animales
+	@Override
+	public String mensajeDeProtesta(){
+		return "Siempre que un hombre se tome el derecho de sacrificar un animal por un fin, no sólo comete una injusticia, sino un crimen (Karlheinz Deschner)";
+	}
 	
 
 }

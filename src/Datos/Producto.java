@@ -45,6 +45,10 @@ public abstract class Producto {
 		return "Producto [Precio = " + getPrecio() + ", Id = " + getId() + ", Descripcion = "
 				+ getDescripcion() + ", Nombre = " + getNombre() + "]";
 	}
-	
+
+	// Poli - Mensaje de "Protesta"
+	public abstract String mensajeDeProtesta();
+
+
 
 }

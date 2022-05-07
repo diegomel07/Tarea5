@@ -48,6 +48,10 @@ public class Ropa extends Producto {
 		
 	}
 	
+	@Override
+	public String mensajeDeProtesta(){
+		return "Exija calidad no solo en los productos que compra, sino en la vida de la persona que lo hizo. —Orsola de Castro, diseñadora y cofundadora de Fashion Revolution";
+	}
 	
 
 }

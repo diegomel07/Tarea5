@@ -44,11 +44,11 @@ public abstract class Aseo extends Producto{
 		return super.toString() + "Aseo [Productor = " + getProductor() + ", Toxico = " + isToxico() + ", Cotenido Neto = "
 				+ getCotenidoNeto() + ", Estado = " + getEstado() + "]";
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public String mensajeDeProtesta(){
+		return "...";
+	}
 	
 	
 

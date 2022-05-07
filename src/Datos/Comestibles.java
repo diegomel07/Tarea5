@@ -75,7 +75,10 @@ public abstract class Comestibles extends Producto {
 				+ ", perecedero=" + perecedero + "]";
 	}
 
-	
+	@Override
+	public String mensajeDeProtesta(){
+		return "...";
+	}
 	
 	
 }
