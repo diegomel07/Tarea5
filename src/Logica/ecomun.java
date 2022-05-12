@@ -198,8 +198,20 @@ public class ecomun {
                 case 4:
                     Funciones.clearScreen();
                     for (ArrayList<String> datos : datos_basicos_productos.values()){
-                        Interfaz.imprimirListaProductos(datos);
+                        Interfaz.imprimirListaProductos(datos);                        
                     }
+
+                    int opcion_todos;
+                    String datos_objeto;
+                    do {
+                        opcion_todos = Interfaz.elegirOpcion();
+                        datos_objeto = Funciones.datosObjeto(opcion_todos);
+                        if (datos_objeto == null){
+                            Interfaz.idInexistente();
+                        } else {
+                            Interfaz.imprimirDatos(datos_objeto);
+                        }
+                    } while (datos_objeto == null);
                     
                     break;
 

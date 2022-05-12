@@ -21,11 +21,11 @@ public class Funciones {
     } 
 
     public static Date generarFecha(){
-        Date d1 = new Date(650000000000L), d2 = new Date();
+        //Date d1 = new Date(650000000000L), d2 = new Date();
 
-        Random rand = new Random();
+        //Random rand = new Random();
 
-        return (new Date(rand.nextLong(d1.getTime(), d2.getTime())));
+        return new Date();
     }
 
 
@@ -179,11 +179,11 @@ public class Funciones {
         return "";
     }
 
+
+    static LinkedHashMap<String, ArrayList<String>> datosBasicos = new LinkedHashMap<String, ArrayList<String>>();
     // LinkedHashMap de todos los nombre + id de los objetos
     public static LinkedHashMap<String, ArrayList<String>> agruparDatosBasicos (){
-        
-        LinkedHashMap<String, ArrayList<String>> datosBasicos = new LinkedHashMap<String, ArrayList<String>>();
-
+    
         datosBasicos.put("Vegetal", listaVegetal(ejemplo_vegetal));
         datosBasicos.put("De Mar", listaDeMar(ejemplo_mar));
         datosBasicos.put("De Tierra", listaDeTierra(ejemplo_de_tierra));
@@ -194,6 +194,46 @@ public class Funciones {
 
         return datosBasicos;
     }
+
+
+    public static TreeMap<Integer, String> objetosIds(){
+        TreeMap<Integer, String> datos = new TreeMap<>();
+
+        for (Vegetal obj: ejemplo_vegetal){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (DeMar obj: ejemplo_mar){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (DeTierra obj: ejemplo_de_tierra){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (Artificial obj: ejemplo_artificial){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (Hogar obj: ejemplo_hogar){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (Personal obj: ejemplo_personal){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+        for (Ropa obj: ejemplo_ropa){
+            datos.put(obj.getId(), obj.toString() + "\n\n\n" + obj.mensajeDeProtesta() + "\n\n\n");
+        }
+
+        return datos;
+    }
+
+    public static String datosObjeto(int id){
+
+        TreeMap<Integer, String> datos = objetosIds();
+
+        return datos.get(id);
+
+    }
+
+    
+
 
 }
 
